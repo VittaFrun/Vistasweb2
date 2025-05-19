@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+.cabecera{
+padding-top: 5px; /*espacio arriba*/
+padding-bottom: 5px; /*espacio abajo*/
+background: linear-gradient(to top, #ff8c00, #ff6a00);
+top: 0; /*inicio posicion arriba del naqvegador*/
+left: 0; /*inicio posicion a la izquierda del naqvegador*/
+width: 100%; /*ancho de la cabecera*/
+position: fixed; /*fijar la cabecera*/
+box-shadow: rgb(182, 70, 0) 2px 5px 20px; /*sombra de la cabecera*/
+border-bottom-left-radius: 20px; /*bordes redondeados*/
+border-bottom-right-radius: 20px; /*bordes redondeados*/
+}
+
+.link-logo{
+vertical-align: middle; /*alinear verticalmente*/
+text-decoration: none; /*sin subrayado*/
+}
+
+.logo{
+width: 130px; /*ancho del logo*/
+height: 110px; /*alto del logo*/
+padding-left: 50px; /*espacio a la izquierda del logo*/
+}
+
+.menu{
+display: inline-block; /*alinear todo el contenido de la cabecera al centro*/
+margin-left: 40%; /*margen a la izquierda*/
+}
+
+.a{
+font-family: 'Poppins', sans-serif; /*fuente del texto*/
+transition: all 0.5s ease; /*transicion de los efectos*/
+margin-left: 3px; /*margen a la izquierda*/
+margin-right: 9px; /*margen a la derecha*/
+color: white; /*color del texto*/
+font-size: 23px; /*tamaño del texto*/
+font-weight: bold; /*negrita del texto*/
+text-transform: uppercasase; /*texto en mayusculas*/
+text-decoration: none; /*sin subrayado*/
+letter-spacing: 1px; /*espacio entre letras*/
+word-spacing: 6px; /*espacio entre palabras*/
+padding: 12px 7px; /*espacio entre el texto y el borde*/
+border-radius: 8px; /*bordes redondeados*/
+background: rgba(0, 0, 0, 0.1);
+}
+
+.l{
+    font-family: 'Poppins', sans-serif; /*fuente del texto*/
+    transition: all 0.5s ease; /*transicion de los efectos*/
+    margin-left: 70px; /*margen a la izquierda*/
+    margin-right: 9px; /*margen a la derecha*/
+    color: white; /*color del texto*/
+    font-size: 23px; /*tamaño del texto*/
+    font-weight: bold; /*negrita del texto*/
+    text-transform: uppercasase; /*texto en mayusculas*/
+    text-decoration: none; /*sin subrayado*/
+    letter-spacing: 1px; /*espacio entre letras*/
+    word-spacing: 6px; /*espacio entre palabras*/
+    padding: 12px 7px; /*espacio entre el texto y el borde*/
+    border-radius: 8px; /*bordes redondeados*/
+    background: rgba(0, 0, 0, 0.1);
+    }
+
+.a:hover{
+background-color: black; /*color de fondo al pasar el mouse*/
+padding:7px 10px;
+color: rgb(255, 128, 0);
+}
+
+.l:hover{
+    background-color: black; /*color de fondo al pasar el mouse*/
+    padding:7px 10px;
+    color: #ff6a00;
+    }
+
+h1{
+    font-family: 'Poppins', sans-serif; /*fuente del texto*/
+    text-transform: uppercase; /*texto en mayusculas*/
+    font-weight: bold; /*negrita del texto*/
+    font-size: 50px; /*tamaño del texto*/
+    color: black; /*color del texto*/
+    background: linear-gradient(to top, #ff8c00, #ff6a00);
+    box-shadow: rgb(182, 70, 0) 2px 5px 15px; /*sombra de la cabecera*/
+    text-align: center; /*alinear al centro*/
+    margin-top: 20px; /*margen arriba*/
+    border-radius: 10px; /*bordes redondeados*/
+}
+
+.carta{
+    text-align: center; /*alinear al centro*/
+    width: 100%; /*ancho de la carta*/
+}
+
+.cartaimg {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.cartaimg img {
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+#lacarta{
+    cursor: pointer; /*cursor de mano*/
+}
+
+.carta p{
+    font-family: 'Poppins', sans-serif; /*fuente del texto*/
+    font-size: 25px; /*tamaño del texto*/
+}
+
+section {
+    width: 100%; /*ancho de la sección*/
+    padding: 50px 20px; /*margen izquierdo y derecho*/
+    box-sizing: border-box; /*incluir el padding en el ancho total*/
+}
+
+.ecard-container {
+    display: flex; /*usar flexbox*/
+    justify-content: center; /*centrar el contenido*/
+    gap: 10px; /* Espacio entre las cartas */
+    flex-wrap: wrap; /* Permite que las cartas se ajusten en varias filas si es necesario */
+    margin-top: 30px; /* Espacio entre las cartas */
+}
+
+.ecard {
+    background-color: white; /*color de fondo*/
+    border-radius: 1rem; /* Bordes redondeados */
+    box-shadow: 0px 4px 15px rgba(119, 45, 0, 0.1);
+    width: 580px; /*ancho de la carta*/
+    height: 700px; /*alto de la carta*/
+    overflow: hidden; /*ocultar el contenido que se sale de la carta*/
+    text-align: center; /*alinear al centro*/
+    margin: 10px; /*margen entre las cartas*/
+}
+.carta img {
+    width: 100%; /*ancho de la imagen*/
+    height: auto; /*alto de la imagen*/
+    display: block; /*mostrar la imagen como bloque*/
+    object-fit: cover; /*ajustar la imagen al contenedor*/
+    border-radius: 1rem 1rem 0 0; /*bordes redondeados*/
+}
+
+.ecardcontent {
+    padding: irem; /*margen entre el texto y el borde*/
+}
+
+.ecard h2 {
+    font-family: 'Poppins', sans-serif; /*fuente del texto*/
+    font-size: 25px; /*tamaño del texto*/
+    color: black; /*color del texto*/
+    margin-top: 10px; /*margen arriba*/
+}
+.ecard p {
+    font-family: 'Poppins', sans-serif; /*fuente del texto*/
+    font-size: 20px; /*tamaño del texto*/
+    color: rgb(78, 78, 78); /*color del texto*/
+    margin: 5px; /*margen entre los textos*/
+}
+
+
+.ecard .carrito {
+    width: 50px; /*ancho del carrito*/
+    height: 50px; /*alto del carrito*/
+    border-radius: 0.5rem; /*bordes redondeados*/
+    text-decoration: none; /*sin subrayado*/
+    background-color: #ff6a00; /*color de fondo*/
+    border-radius: 1rem; /*bordes redondeados*/ 
+    padding:2px 30px; /*margen entre el texto y el borde*/
+    margin-top: 10px; /*margen arriba*/
+}
+
+.ecard a:hover {
+    padding:7px 10px;
+    color: rgb(255, 128, 0);
+    box-shadow: #ff8c00;
+    }
