@@ -168,7 +168,6 @@ section {
     margin: 5px; /*margen entre los textos*/
 }
 
-
 .ecard .carrito {
     width: 50px; /*ancho del carrito*/
     height: 50px; /*alto del carrito*/
@@ -185,3 +184,39 @@ section {
     color: rgb(255, 128, 0);
     box-shadow: #ff8c00;
     }
+
+.producto-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.producto {
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+footer {
+    background-color: #ff6a00;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer .footer-menu {
+    margin-top: 10px;
+}
+
+footer .footer-menu a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer .footer-menu a:hover {
+    text-decoration: underline;
+}
