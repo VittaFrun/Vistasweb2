@@ -220,3 +220,74 @@ footer .footer-menu a {
 footer .footer-menu a:hover {
     text-decoration: underline;
 }
+
+#contacto {
+    background-color: #f9f9f9; /* Color de fondo suave */
+    padding: 50px 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    text-align: center; /* Centrar texto */
+}
+
+#contacto h1 {
+    font-family: 'Poppins', sans-serif; /* Fuente del título */
+    font-size: 36px; /* Tamaño del título */
+    color: #000000; /* Color del título */
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+#contacto p {
+    font-family: 'Poppins', sans-serif; /* Fuente del texto */
+    font-size: 18px; /* Tamaño del texto */
+    color: #333; /* Color del texto */
+    margin-bottom: 30px; /* Margen inferior */
+}
+
+form {
+    display: flex; /* Usar flexbox para el formulario */
+    flex-direction: column; /* Colocar elementos en columna */
+    align-items: center; /* Centrar elementos */
+    gap: 15px; /* Espacio entre elementos */
+    max-width: 500px; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centrar el formulario */
+}
+
+label {
+    font-family: 'Poppins', sans-serif; /* Fuente de las etiquetas */
+    font-size: 16px; /* Tamaño de las etiquetas */
+    color: #555; /* Color de las etiquetas */
+    align-self: flex-start; /* Alinear etiquetas a la izquierda */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+    color: #333; /* Color de texto */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #ff6a00; /* Color del borde al enfocar */
+    outline: none; /* Sin contorno */
+}
+
+button {
+    background-color: #ff6a00; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 18px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambiar cursor al pasar el mouse */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+button:hover {
+    background-color: #e65c00; /* Color de fondo al pasar el mouse */
+}
