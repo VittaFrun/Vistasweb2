@@ -1,7 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+:root {
+    --brand-orange: #ff6a00;
+    --brand-orange-dark: #ff8c00;
+    --text-dark: #000000;
+}
 *{
     margin: 0;
     padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+main {
+    padding-top: 140px; /* compensar header fijo */
 }
 .cabecera{
 padding-top: 5px; /*espacio arriba*/
@@ -14,6 +33,7 @@ position: fixed; /*fijar la cabecera*/
 box-shadow: rgb(182, 70, 0) 2px 5px 20px; /*sombra de la cabecera*/
 border-bottom-left-radius: 20px; /*bordes redondeados*/
 border-bottom-right-radius: 20px; /*bordes redondeados*/
+ z-index: 1000; /* asegurar que quede encima */
 }
 
 .link-logo{
@@ -27,9 +47,19 @@ height: 110px; /*alto del logo*/
 padding-left: 50px; /*espacio a la izquierda del logo*/
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .menu{
-display: inline-block; /*alinear todo el contenido de la cabecera al centro*/
-margin-left: 40%; /*margen a la izquierda*/
+    display: flex; /* usar flexbox para el menú */
+    align-items: center;
+    gap: 12px;
 }
 
 .a{
@@ -40,7 +70,7 @@ margin-right: 9px; /*margen a la derecha*/
 color: white; /*color del texto*/
 font-size: 23px; /*tamaño del texto*/
 font-weight: bold; /*negrita del texto*/
-text-transform: uppercasase; /*texto en mayusculas*/
+text-transform: uppercase; /*texto en mayusculas*/
 text-decoration: none; /*sin subrayado*/
 letter-spacing: 1px; /*espacio entre letras*/
 word-spacing: 6px; /*espacio entre palabras*/
@@ -52,12 +82,12 @@ background: rgba(0, 0, 0, 0.1);
 .l{
     font-family: 'Poppins', sans-serif; /*fuente del texto*/
     transition: all 0.5s ease; /*transicion de los efectos*/
-    margin-left: 70px; /*margen a la izquierda*/
+    margin-left: 0; /*sin margen extra*/
     margin-right: 9px; /*margen a la derecha*/
     color: white; /*color del texto*/
     font-size: 23px; /*tamaño del texto*/
     font-weight: bold; /*negrita del texto*/
-    text-transform: uppercasase; /*texto en mayusculas*/
+    text-transform: uppercase; /*texto en mayusculas*/
     text-decoration: none; /*sin subrayado*/
     letter-spacing: 1px; /*espacio entre letras*/
     word-spacing: 6px; /*espacio entre palabras*/
@@ -123,6 +153,7 @@ section {
     width: 100%; /*ancho de la sección*/
     padding: 50px 20px; /*margen izquierdo y derecho*/
     box-sizing: border-box; /*incluir el padding en el ancho total*/
+    scroll-margin-top: 140px; /* compensar header fijo para anclas */
 }
 
 .ecard-container {
@@ -137,11 +168,16 @@ section {
     background-color: white; /*color de fondo*/
     border-radius: 1rem; /* Bordes redondeados */
     box-shadow: 0px 4px 15px rgba(119, 45, 0, 0.1);
-    width: 580px; /*ancho de la carta*/
-    height: 700px; /*alto de la carta*/
+    width: min(100%, 580px); /* ancho responsivo */
+    height: auto; /* alto automático */
     overflow: hidden; /*ocultar el contenido que se sale de la carta*/
     text-align: center; /*alinear al centro*/
     margin: 10px; /*margen entre las cartas*/
+}
+.ecard > img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 .carta img {
     width: 100%; /*ancho de la imagen*/
@@ -151,8 +187,8 @@ section {
     border-radius: 1rem 1rem 0 0; /*bordes redondeados*/
 }
 
-.ecardcontent {
-    padding: irem; /*margen entre el texto y el borde*/
+.ecard-content {
+    padding: 1rem; /*margen entre el texto y el borde*/
 }
 
 .ecard h2 {
@@ -182,8 +218,33 @@ section {
 .ecard a:hover {
     padding:7px 10px;
     color: rgb(255, 128, 0);
-    box-shadow: #ff8c00;
-    }
+    box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.25);
+}
+
+.menu a:focus-visible,
+footer .footer-menu a:focus-visible {
+    outline: 3px solid var(--brand-orange-dark);
+    outline-offset: 2px;
+    border-radius: 8px;
+}
+
+@media (max-width: 992px) {
+    h1 { font-size: 40px; }
+    .logo { width: 100px; height: 85px; padding-left: 20px; }
+    .a, .l { font-size: 18px; padding: 10px 6px; }
+}
+
+@media (max-width: 768px) {
+    .container { flex-wrap: wrap; gap: 10px; }
+    .menu { flex-wrap: wrap; justify-content: center; gap: 8px; }
+    .logo { padding-left: 0; }
+    h1 { font-size: 34px; }
+}
+
+@media (max-width: 480px) {
+    .a, .l { font-size: 16px; padding: 8px 6px; }
+    h1 { font-size: 28px; }
+}
 
 .producto-container {
     display: flex;
@@ -198,6 +259,15 @@ section {
     border: 1px solid #ccc;
     border-radius: 10px;
     padding: 10px;
+}
+.producto img {
+    width: 100%;
+    height: auto;
+}
+
+.hero {
+    width: 100%;
+    height: auto;
 }
 
 footer {
